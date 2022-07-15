@@ -7,19 +7,19 @@ import Web3 from 'web3'
 import twitter from '../images/socials/twitter.svg'
 import instagram from '../images/socials/instagram.svg'
 import opensea from '../images/socials/opensea.svg'
-import showcase from '../images/showcase.png'
+import showcase from '../images/POVTexasCollage.jpg'
 import '../App.css'
 
 // Import Components
 import Navbar from './Navbar'
 
 // Import ABI + Config
-import OpenPunks from '../abis/OpenPunks.json'
+import POVTexas from '../abis/POVTexas.json'
 import config from '../config.json'
 
 function App() {
 	const [web3, setWeb3] = useState(null)
-	const [openPunks, setOpenPunks] = useState(null)
+	const [povTexas, setPOVTexas] = useState(null)
 
 	const [supplyAvailable, setSupplyAvailable] = useState(0)
 
@@ -43,19 +43,19 @@ function App() {
 	const loadBlockchainData = async (_web3, _account, _networkId) => {
 		// Fetch Contract, Data, etc.
 		try {
-			const openPunks = new _web3.eth.Contract(OpenPunks.abi, OpenPunks.networks[_networkId].address)
-			setOpenPunks(openPunks)
+			const povTexas = new _web3.eth.Contract(POVTexas.abi, POVTexas.networks[_networkId].address)
+			setPOVTexas(povTexas)
 
-			const maxSupply = await openPunks.methods.maxSupply().call()
-			const totalSupply = await openPunks.methods.totalSupply().call()
+			const maxSupply = await povTexas.methods.maxSupply().call()
+			const totalSupply = await povTexas.methods.totalSupply().call()
 			setSupplyAvailable(maxSupply - totalSupply)
 
-			const allowMintingAfter = await openPunks.methods.allowMintingAfter().call()
-			const timeDeployed = await openPunks.methods.timeDeployed().call()
+			const allowMintingAfter = await povTexas.methods.allowMintingAfter().call()
+			const timeDeployed = await povTexas.methods.timeDeployed().call()
 			setRevealTime((Number(timeDeployed) + Number(allowMintingAfter)).toString() + '000')
 
 			if (_account) {
-				const ownerOf = await openPunks.methods.walletOfOwner(_account).call()
+				const ownerOf = await povTexas.methods.walletOfOwner(_account).call()
 				setOwnerOf(ownerOf)
 			} else {
 				setOwnerOf([])
@@ -124,17 +124,17 @@ function App() {
 		}
 
 		// Mint NFT
-		if (openPunks && account) {
+		if (povTexas && account) {
 			setIsMinting(true)
 			setIsError(false)
 
-			await openPunks.methods.mint(1).send({ from: account, value: 0 })
+			await povTexas.methods.mint(1).send({ from: account, value: 0 })
 				.on('confirmation', async () => {
-					const maxSupply = await openPunks.methods.maxSupply().call()
-					const totalSupply = await openPunks.methods.totalSupply().call()
+					const maxSupply = await povTexas.methods.maxSupply().call()
+					const totalSupply = await povTexas.methods.totalSupply().call()
 					setSupplyAvailable(maxSupply - totalSupply)
 
-					const ownerOf = await openPunks.methods.walletOfOwner(account).call()
+					const ownerOf = await povTexas.methods.walletOfOwner(account).call()
 					setOwnerOf(ownerOf)
 				})
 				.on('error', (error) => {
@@ -148,7 +148,7 @@ function App() {
 
 	const cycleImages = async () => {
 		const getRandomNumber = () => {
-			const counter = (Math.floor(Math.random() * 1000)) + 1
+			const counter = (Math.floor(Math.random() * 16)) + 1
 			setCounter(counter)
 		}
 
@@ -169,18 +169,18 @@ function App() {
 
 					<Row className='header my-3 p-3 mb-0 pb-0'>
 						<Col xs={12} md={12} lg={8} xxl={8}>
-							<h1>Open Punks</h1>
-							<p className='sub-header'>Availble on 05 / 26 / 22</p>
+							<h1>POV: You Moved to Texas</h1>
+							<p className='sub-header'>Availble on 07 / 15 / 22</p>
 						</Col>
 						<Col className='flex social-icons'>
 							<a
-								href="https://twitter.com/DappUniversity"
+								href="https://twitter.com/HollyStCrypto"
 								target='_blank'
 								className='circle flex button'>
 								<img src={twitter} alt="Twitter" />
 							</a>
 							<a
-								href="#"
+								href="https://www.instagram.com/hollystcrypto/"
 								target='_blank'
 								className='circle flex button'>
 								<img src={instagram} alt="Instagram" />
@@ -197,15 +197,15 @@ function App() {
 					<Row className='flex m-3'>
 						<Col md={5} lg={4} xl={5} xxl={4} className='text-center'>
 							<img
-								src={`https://gateway.pinata.cloud/ipfs/QmNN9ATnagEMrC9V5Up9c8KUrZGDiCBQVS58x3ojktg2Lt/${counter}.png`}
-								alt="Crypto Punk"
-								className='showcase'
+								src={`https://gateway.pinata.cloud/ipfs/QmYCYup9LPi8NsTGVETPmEbnDrtguAbkjFaPysiipxj5Aw/${counter}.png`}
+								alt="slideshow"
+								className='slideshow'
 							/>
 						</Col>
 						<Col md={5} lg={4} xl={5} xxl={4}>
 							{revealTime !== 0 && <Countdown date={currentTime + (revealTime - currentTime)} className='countdown mx-3' />}
 							<p className='text'>
-								By attending the masterclass, you'll learn how to generate NFT images, upload to IPFS, create your NFT contract, and use OpenSea!
+								Visual story telling through NFT Photography. Based on my life while moving to Texas in 2020. Stay tuned for live minting available soon!
 							</p>
 							<a href="#about" className='button mx-3'>Learn More!</a>
 						</Col>
@@ -227,7 +227,7 @@ function App() {
 									<h3>Mint your NFT in</h3>
 									{revealTime !== 0 && <Countdown date={currentTime + (revealTime - currentTime)} className='countdown' />}
 									<ul>
-										<li>1,000 generated punked out images using an art generator</li>
+										<li>16 NFTs depicting a life of adventure with no solid plans</li>
 										<li>Free minting on Rinkeby testnet</li>
 										<li>Viewable on Opensea shortly after minting</li>
 									</ul>
@@ -241,7 +241,7 @@ function App() {
 									{ownerOf.length > 0 &&
 										<p><small>View your NFT on
 											<a
-												href={`${openseaURL}/assets/${openPunks._address}/${ownerOf[0]}`}
+												href={`${openseaURL}/assets/${povTexas._address}/${ownerOf[0]}`}
 												target='_blank'
 												style={{ display: 'inline-block', marginLeft: '3px' }}>
 												OpenSea
@@ -254,12 +254,12 @@ function App() {
 
 					<Row style={{ marginTop: "100px" }}>
 						<Col>
-							{openPunks &&
+							{povTexas &&
 								<a
-									href={`${explorerURL}/address/${openPunks._address}`}
+									href={`${explorerURL}/address/${povTexas._address}`}
 									target='_blank'
 									className='text-center'>
-									{openPunks._address}
+									{povTexas._address}
 								</a>
 							}
 						</Col>

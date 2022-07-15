@@ -56,11 +56,23 @@ MINT_COST=0 // cost of the NFT. reccomend set to .08 (i.e. 80000000000000000wei)
 MAX_SUPPLY= // how many pictures are you posting?
 
 IPFS_IMAGE_METADATA_CID=""
-IPFS_HIDDEN_IMAGE_METADATA_CID=""
+IPFS_HIDDEN_IMAGE_METADATA_CID="" // You must regenerate the metadata before uploading to pinata
 
 NFT_MINT_DATE="Apr 18, 2022 22:00:00" // Update this date
 
-13) Replace Social Media Links, Instagram, Twitter
+13) Regenerate Metadata
 
-14) Run test script for new contract
+14) Replace Social Media Links, Instagram, Twitter
+
+15) Run test script for new contract
 MyNewNFTProject.test.js
+
+16) App.js
+- 151: change counter to number of images in your collection
+- 200-202: update image link and name
+- 208: Preminting message
+- 220: Update image name
+
+17) App.css
+- h1
+- sub-header

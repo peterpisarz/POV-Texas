@@ -60,16 +60,20 @@ main {
 
 /* TEXT STYLES */
 h1 {
-    font-family: "Gochi Hand";
-    font-weight: 700;
-    font-size: clamp(3rem, 10vw, 10rem);
-    transform: rotate(-4deg);
+    font-family: "Courier New";
+    font-weight: 500;
+    letter-spacing: -5px;
+    word-spacing:  -10px;
+    font-size: clamp(3rem, 3vw, 10rem);
+    /*transform: rotate(-4deg);*/
     padding-left: .8em;
 }
 
 h2 {
-    font-family: "Gochi Hand";
-    font-weight: 700;
+    font-family: "Courier New";
+    font-weight: 500;
+    letter-spacing: -7px;
+    word-spacing:  -20px;
     font-size: clamp(2rem, 5vw, 5rem);
     padding-left: .8em;
 }
@@ -79,10 +83,12 @@ h3 {
 }
 
 .sub-header {
-    font-family: "Gochi Hand";
-    font-weight: 700;
-    font-size: clamp(2rem, 5vw, 4rem);
-    transform: rotate(-4deg) translateX(2.5em) translateY(-0.5em);
+    font-family: "Courier New";
+    font-weight: 400;
+    letter-spacing: -3px;
+    word-spacing:  -5px;
+    font-size: clamp(2rem, 1vw, 4rem);
+    /*transform: rotate(-4deg) translateX(2.5em) translateY(-0.5em);*/
     padding-left: .8em;
 }
 
@@ -158,6 +164,11 @@ a:hover {
 
 .showcase {
     width: 250px;
+    height: auto;
+}
+
+.slideshow {
+    width: 400px;
     height: auto;
 }
 
