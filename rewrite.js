@@ -19,6 +19,7 @@ const NewSpace = "POV Texas"
 const newContract = "povTexas"
 const setContract = "setPOVTexas"
 const newPackage = "pov_texas"
+const newConfig = "pov-texas"
 
 // PATHS TO FILES NEEDING VARIABLE REWRITE
 const contract = path.join(basePath, "src/contracts/OpenPunks.sol")
