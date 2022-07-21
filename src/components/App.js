@@ -128,7 +128,7 @@ function App() {
 			setIsMinting(true)
 			setIsError(false)
 
-			await povTexas.methods.mint(1).send({ from: account, value: 0 })
+			await povTexas.methods.mint(1).send({ from: account, value: 50000000000000000 })
 				.on('confirmation', async () => {
 					const maxSupply = await povTexas.methods.maxSupply().call()
 					const totalSupply = await povTexas.methods.totalSupply().call()
@@ -197,7 +197,7 @@ function App() {
 					<Row className='flex m-3'>
 						<Col md={5} lg={4} xl={5} xxl={4} className='text-center'>
 							<img
-								src={`https://gateway.pinata.cloud/ipfs/QmYCYup9LPi8NsTGVETPmEbnDrtguAbkjFaPysiipxj5Aw/${counter}.png`}
+								src={`https://gateway.pinata.cloud/ipfs/QmUY9dTKeEsosR3qq8xLJxdEEgjRudRSBHY8vYSR2sE5qW/${counter}.png`}
 								alt="slideshow"
 								className='slideshow'
 							/>

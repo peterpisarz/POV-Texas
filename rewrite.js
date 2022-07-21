@@ -90,3 +90,5 @@ fs.readFile(packagejson, 'utf8', function (err,data) {
 // Replace index.html NEEDS MANUAL
 
 // Replace .env NEEDS MANUAL
+
+//replace value in app.js

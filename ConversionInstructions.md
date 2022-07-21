@@ -72,6 +72,7 @@ MyNewNFTProject.test.js
 - 200-202: update image link and name
 - 208: Preminting message
 - 220: Update image name
+- 131: value to match mint cost
 
 17) App.css
 - h1
