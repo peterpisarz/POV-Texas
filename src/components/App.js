@@ -197,7 +197,7 @@ function App() {
 					<Row className='flex m-3'>
 						<Col md={5} lg={4} xl={5} xxl={4} className='text-center'>
 							<img
-								src={`https://gateway.pinata.cloud/ipfs/QmUY9dTKeEsosR3qq8xLJxdEEgjRudRSBHY8vYSR2sE5qW/${counter}.png`}
+								src={`https://gateway.pinata.cloud/ipfs/QmYCYup9LPi8NsTGVETPmEbnDrtguAbkjFaPysiipxj5Aw/${counter}.png`}
 								alt="slideshow"
 								className='slideshow'
 							/>
