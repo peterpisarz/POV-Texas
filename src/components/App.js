@@ -203,7 +203,7 @@ function App() {
 							/>
 						</Col>
 						<Col md={5} lg={4} xl={5} xxl={4}>
-							{revealTime !== 0 && <Countdown date={currentTime + (revealTime - currentTime)} className='countdown mx-3' />}
+							{revealTime !== 0 && <Countdown date={currentTime + (revealTime - currentTime)} className='countdown mx-auto' />}
 							<p className='text'>
 								Visual story telling through NFT Photography. Based on my life while moving to Texas in 2020. Stay tuned for live minting available soon!
 							</p>

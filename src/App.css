@@ -66,7 +66,8 @@ h1 {
     word-spacing:  -10px;
     font-size: clamp(3rem, 3vw, 10rem);
     /*transform: rotate(-4deg);*/
-    padding-left: .8em;
+    /*padding-left: .8em;*/
+    text-align: center;
 }
 
 h2 {
@@ -74,7 +75,7 @@ h2 {
     font-weight: 500;
     letter-spacing: -7px;
     word-spacing:  -20px;
-    font-size: clamp(2rem, 5vw, 5rem);
+    font-size: clamp(3rem, 5vw, 5rem);
     padding-left: .8em;
 }
 
@@ -87,9 +88,10 @@ h3 {
     font-weight: 400;
     letter-spacing: -3px;
     word-spacing:  -5px;
-    font-size: clamp(2rem, 1vw, 4rem);
+    font-size: clamp(1.5rem, 1vw, 4rem);
     /*transform: rotate(-4deg) translateX(2.5em) translateY(-0.5em);*/
-    padding-left: .8em;
+    padding-left: 0em;
+    text-align: center;
 }
 
 .countdown {
@@ -101,7 +103,7 @@ h3 {
 .text, ul {
     font-size: clamp(1rem, 2vw, 1.15rem);
     font-weight: 300;
-    padding: 1.15em;
+    padding: 0em;
 }
 
 /* LINK / BUTTON STYLES */
@@ -122,6 +124,7 @@ a:hover {
     display: inline-block;
     padding: .75em 1.5em;
     margin: .5em auto;
+    align-items: center;
 
     background: linear-gradient(to left, var(--clr-button-bg-1), var(--clr-button-bg-2));
     color: var(--clr-text-dark);
@@ -170,6 +173,9 @@ a:hover {
 .slideshow {
     width: 400px;
     height: auto;
+    align-items: center;
+    padding: 0;
+    margin-left: unset !important;
 }
 
 /* Social Media Icon */
