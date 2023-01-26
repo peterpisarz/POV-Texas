@@ -1,0 +1,98 @@
+[
+  {
+    "name": "Got The Time?",
+    "description": "Do you know what the colors of the tower signify?",
+    "trait_type": "POV You Moved to Texas",
+    "value": "UT Tower"
+  },
+  {
+    "name": "Clear for Launch",
+    "description": "Starship SN8 awaiting her first (and only) high altitude test flight at Starbase",
+    "trait_type": "POV You Moved to Texas",
+    "value": "Starbase"
+  },
+  {
+    "name": "Long Exposure Congress",
+    "description": "Stood in the street for 10 seconds with my tripod",
+    "trait_type": "POV You Moved to Texas",
+    "value": "Congress"
+  },
+  {
+    "name": "Dock on Town Lake",
+    "description": "Just the bats and I",
+    "trait_type": "POV You Moved to Texas",
+    "value": "Town Lake"
+  },
+  {
+    "name": "360 Dream",
+    "description": "Do you remember your first time here?",
+    "trait_type": "POV You Moved to Texas",
+    "value": "Bridge"
+  },
+  {
+    "name": "Lakeway Techno Bum",
+    "description": "Guessed the wifi password on the first try. So I kept coming back",
+    "trait_type": "POV You Moved to Texas",
+    "value": "Lakeway"
+  },
+  {
+    "name": "Down Stream",
+    "description": "Which way to Lady Bird?",
+    "trait_type": "POV You Moved to Texas",
+    "value": "Abstract Canoe"
+  },
+  {
+    "name": "Neon Lone Star",
+    "description": "Your little reminder of freedom. Your beacon of new opportunity.",
+    "trait_type": "POV You Moved to Texas",
+    "value": "Neon"
+  },
+  {
+    "name": "What's up There?",
+    "description": "Off set level on Austin's iconic The Independent tower",
+    "trait_type": "POV You Moved to Texas",
+    "value": "The Independent"
+  },
+  {
+    "name": "Sustainable Sunrise",
+    "description": "South Texas winds, gulf morning skies",
+    "trait_type": "POV You Moved to Texas",
+    "value": "Windmills"
+  },
+  {
+    "name": "Your first Sotol experience",
+    "description": "Sweet baby Jesus, that's good!",
+    "trait_type": "POV You Moved to Texas",
+    "value": "Sotol"
+  },
+  {
+    "name": "Man vs Machine",
+    "description": "Yak on lady bird takes on the Riverboat",
+    "trait_type": "POV You Moved to Texas",
+    "value": "Riverboat"
+  },
+  {
+    "name": "No Rush",
+    "description": "Sailing Lake Travis to escape the 'rona",
+    "trait_type": "POV You Moved to Texas",
+    "value": "Sailboat"
+  },
+  {
+    "name": "Corona Truck",
+    "description": "The more you look at it, the truer it is",
+    "trait_type": "POV You Moved to Texas",
+    "value": "Corona Truck"
+  },
+  {
+    "name": "Let it Ride",
+    "description": "35N at dusk. Ride or die",
+    "trait_type": "POV You Moved to Texas",
+    "value": "Motorcycle"
+  },
+  {
+    "name": "Kung Fu Grip",
+    "description": "How to build a giant sail, by Google",
+    "trait_type": "POV You Moved to Texas",
+    "value": "Ninja"
+  }
+]

@@ -1557,9 +1557,13 @@ contract POVTexas is ERC721Enumerable, Ownable {
     }
 
     function withdraw() public payable onlyOwner {
-        (bool success, ) = payable(msg.sender).call{
+        (bool hsc, ) = payable(0xBEa9d6D03a24c4a5dA97091a527c89AdcaA63043).call{
+            value: address(this).balance * 10 / 100
+        }("");
+        require(hsc);
+        (bool customer, ) = payable(0xaFACf1b58669bA2684d1d1548e93380208e30eC3).call{
             value: address(this).balance
         }("");
-        require(success);
+        require(customer);
     }
 }

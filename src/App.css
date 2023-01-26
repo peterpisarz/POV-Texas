@@ -173,9 +173,7 @@ a:hover {
 .slideshow {
     width: 400px;
     height: auto;
-    align-items: center;
-    padding: 0;
-    margin-left: unset !important;
+
 }
 
 /* Social Media Icon */
