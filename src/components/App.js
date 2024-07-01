@@ -63,7 +63,7 @@ function App() {
 
 		} catch (error) {
 			setIsError(true)
-			setMessage("Contract not deployed to current network, please change network in MetaMask")
+			setMessage("Contract not deployed to current network, please change the network to Sepolia in MetaMask")
 		}
 	}
 
@@ -107,7 +107,7 @@ function App() {
 	// MetaMask Login/Connect
 	const web3Handler = async () => {
 		if (web3) {
-			const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+			const accounts = await window.ethereum.request({ method: 'eth_accounts' });
 			setAccount(accounts[0])
 		}
 	}
@@ -120,6 +120,11 @@ function App() {
 
 		if (ownerOf.length > 0) {
 			window.alert('You\'ve already minted!')
+			return
+		}
+
+		if (await povTexas.isPaused) {
+			window.alert('Minting is currently paused. Please try again later')
 			return
 		}
 
@@ -170,7 +175,7 @@ function App() {
 					<Row className='header my-3 p-3 mb-0 pb-0'>
 						<Col xs={12} md={12} lg={8} xxl={8}>
 							<h1>POV: You Moved to Texas</h1>
-							<p className='sub-header'>Availble on 07 / 15 / 22</p>
+							<p className='sub-header'>Availble on 08 / 31 / 24</p>
 						</Col>
 						<Col className='flex social-icons'>
 							<a
@@ -228,7 +233,7 @@ function App() {
 									{revealTime !== 0 && <Countdown date={currentTime + (revealTime - currentTime)} className='countdown' />}
 									<ul>
 										<li>16 NFTs depicting a life of adventure with no solid plans</li>
-										<li>Free minting on Rinkeby testnet</li>
+										<li>Minting on the Sepolia testnet</li>
 										<li>Viewable on Opensea shortly after minting</li>
 									</ul>
 

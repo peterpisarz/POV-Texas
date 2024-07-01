@@ -19,6 +19,18 @@ module.exports = {
 			network_id: 4
 		},
 
+	    sepolia: {
+	        provider: function() {
+	        	return new HDWalletProvider(
+		        	[process.env.DEPLOYER_PRIVATE_KEY],
+		        	`https://eth-sepolia.g.alchemy.com/v2/${process.env.ALCHEMY_API_KEY}`// Url to an Ethereum Node
+	        )
+	      },
+	      // gas: 5000000,
+	      // gasPrice: 25000000000,
+	      network_id: 11155111
+	    },
+
 		matic: {
 			provider: function () {
 				return new HDWalletProvider(
